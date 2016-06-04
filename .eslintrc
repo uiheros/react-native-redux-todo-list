@@ -1,0 +1,50 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "modules": true,
+    "jsx": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jasmine": true
+  },
+  "globals": {
+    "module": true,
+    "define": true
+  },
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "rules":{
+    "camelcase": 2,
+    "comma-dangle": 0,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "max-params": [2, 5],
+    "max-depth": [2, 2],
+    "complexity": [2, 6],
+    "max-len": [2, 160, 4],
+    "new-cap": 2,
+    "semi": 2,
+    "no-trailing-spaces": 2,
+    "space-before-blocks": 2,
+    "keyword-spacing": 2,
+    "eol-last": 2,
+    "no-multiple-empty-lines": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-unknown-property": 2,
+    "react/jsx-boolean-value": [1, "always"],
+    "react/jsx-uses-react": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-multi-comp": 1,
+    "react/react-in-jsx-scope": 1,
+    "react/self-closing-comp": 1,
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2
+  }
+}
