@@ -1,6 +1,6 @@
 {
-  "name": "react-native-todo-list",
-  "version": "0.0.1",
+  "name": "react-native-redux-todo-list",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -24,5 +24,21 @@
   },
   "author": "viruschidai@gmail.com",
   "license": "MIT",
-  "description": "A sample React Native Todo app which uses Redux for managing app state"
+  "description": "A sample React Native Todo app which uses Redux for managing app state",
+  "main": "index.ios.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uiheros/react-native-redux-todo-list.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "redux",
+    "todo",
+    "todolist"
+  ],
+  "bugs": {
+    "url": "https://github.com/uiheros/react-native-redux-todo-list/issues"
+  },
+  "homepage": "https://github.com/uiheros/react-native-redux-todo-list#readme"
 }
