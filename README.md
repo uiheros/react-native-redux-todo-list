@@ -6,7 +6,7 @@ A sample todo list app developed by using react native, redux.
 [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20Android-lightgrey.svg)](http://facebook.github.io/react-native/docs/getting-started.html)
 
 
-![alt tag](https://github.com/uiheros/react-native-redux-todo-list/todolist.gif)
+![alt tag](https://github.com/uiheros/react-native-redux-todo-list/blob/master/todolist.gif)
 
 
 ## How to run the app
