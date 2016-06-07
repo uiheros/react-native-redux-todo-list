@@ -2,10 +2,9 @@
 
 A sample todo list app developed by using React Native and Redux.
 
-[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=57565cc3ecb54601001fe9d7&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/57565cc3ecb54601001fe9d7/build/l
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=57565cc3ecb54601001fe9d7&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/57565cc3ecb54601001fe9d7/build/latest)
 [![Language](https://img.shields.io/badge/language-ES%206-orange.svg)](https://github.com/lukehoban/es6features#readme)
 [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20Android-lightgrey.svg)](http://facebook.github.io/react-native/docs/getting-started.html)
-[![License](https://img.shields.io/github/license/uiheros/react-native-redux-todo-list.svg?style=flat)](https://github.com/uiheros/react-native-redux-todo-list/blob/master/LICENSE)
 
 ![alt tag](https://github.com/uiheros/react-native-redux-todo-list/blob/master/todolist.gif)
 
