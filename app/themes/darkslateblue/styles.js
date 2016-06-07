@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   navbar: {
     borderBottomWidth: 1,
     borderBottomColor: variables.colorBorder,
+    backgroundColor: variables.colorNavBg,
   },
   separator: {
     backgroundColor: variables.colorBorder,

@@ -26,6 +26,7 @@ class NewTodo extends Component {
       <Modal animationType={'slide'} >
           <View style={styles.container}>
             <NavigationBar
+              statusBar={{tintColor: variables.colorNavBg, style: 'light-content'}}
               title={{ title: 'New Task', tintColor: variables.colorTint }}
               leftButton={{ title: 'Cancel', handler: this.cancel, tintColor: variables.colorNavbarText }}
               style={styles.navbar}

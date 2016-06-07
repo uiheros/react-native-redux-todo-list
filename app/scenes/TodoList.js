@@ -28,6 +28,7 @@ class TodoList extends Component {
     return (
       <View style={styles.container}>
         <NavigationBar
+          statusBar={{tintColor: variables.colorNavBg, style: 'light-content'}}
           title={{ title: 'Tasks', tintColor:  variables.colorTint }}
           rightButton={{ title: 'Add', handler: this.addNewTodo, tintColor: variables.colorNavbarText }}
           style={styles.navbar}
