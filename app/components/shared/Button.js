@@ -4,7 +4,7 @@ import {
     TouchableHighlight
 } from 'react-native';
 
-const Button = ({theme, disabled}) => {
+const Button = ({theme, disabled, children, onPress}) => {
   const {styles} = theme;
   const btnStyles = [styles.button];
   if (disabled) {
@@ -13,11 +13,11 @@ const Button = ({theme, disabled}) => {
 
   return (
     <TouchableHighlight
-        onPress={this.props.onPress}
+        onPress={onPress}
         style={btnStyles}
         underlayColor="#a30000"
         activeOpacity={1}>
-      <Text style={styles.buttonText}>{this.props.children}</Text>
+      <Text style={styles.buttonText}>{children}</Text>
     </TouchableHighlight>
   );
 };
