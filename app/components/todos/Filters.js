@@ -29,6 +29,6 @@ class Filters extends Component {
 
 Filters.propTypes = {
   theme: PropTypes.object
-}
+};
 
 export default Filters;

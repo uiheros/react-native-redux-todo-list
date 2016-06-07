@@ -11,7 +11,6 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import theme from './themes/default';
-const {styles} = theme;
 import todoApp from './reducers';
 import TodoList from './scenes/TodoList';
 let store = createStore(todoApp);

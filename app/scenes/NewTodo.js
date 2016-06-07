@@ -27,17 +27,17 @@ class NewTodo extends Component {
           title={{ title: 'New Task', tintColor: variables.colorTint }}
           leftButton={{ title: 'Cancel', handler: this.cancel, tintColor: variables.colorNavbarText }}
           style={styles.navbar}
-        />    
+        />
         <ScrollView horizontal={false}>
           <AddTodo onFinish={this.done} theme={theme} />
         </ScrollView>
-      </View>  
+      </View>
     );
   }
 }
 
 NewTodo.propTypes = {
   theme: PropTypes.object
-}
+};
 
 export default NewTodo;

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, TextInput, Text} from 'react-native';
+import { View, TextInput } from 'react-native';
 import Button from '../shared/Button';
 
 class AddTodo extends Component {
@@ -21,7 +21,6 @@ class AddTodo extends Component {
     const {theme} = this.props;
     const {styles, variables} = theme;
     const btnDisabled = this.state.text.trim().length === 0;
-    
     return (
       <View style={styles.todoEditForm}>
         <TextInput
@@ -43,6 +42,6 @@ AddTodo.propTypes = {
   theme: PropTypes.object,
   saveTodo: PropTypes.func.isRequired,
   onFinish: PropTypes.func.isRequired
-}
+};
 
 export default AddTodo;

@@ -8,6 +8,6 @@ const variables = {
   colorWhite: '#fff',
   colorRed: '#ff1300',
   colorDisabled: '#c7c7c7',
-}
+};
 
 export default variables;

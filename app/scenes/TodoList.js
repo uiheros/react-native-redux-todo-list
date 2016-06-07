@@ -39,10 +39,10 @@ class TodoList extends Component {
       </View>
     );
   }
-}  
-  
+}
+
 TodoList.propTyeps = {
   theme: PropTypes.object
-}
+};
 
 export default TodoList;
