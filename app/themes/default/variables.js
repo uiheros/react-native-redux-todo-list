@@ -1,13 +1,18 @@
+const blue='#007aff';
+const slategray='#708090';
+const lightslategray='#778899';
+
 const variables = {
-  colorBg: '#fff',
-  colorMainText: '#333',
-  colorSecondaryText: '#678',
-  colorBorder: '#ccc',
-  colorTint: '#ff9500',
-  colorNavbarText: '#007aff',
-  colorWhite: '#fff',
-  colorRed: '#ff1300',
+  colorMain: slategray,
+  colorSecondary: lightslategray,
+  colorNavBg: slategray,
+  colorNavbarText: blue,
+  colorMainText: blue,
+  colorSecondaryText: '#363636',
+  colorBorder: '#cccccc',
+  colorWhite: '#ffffff',
   colorDisabled: '#c7c7c7',
+  mainBgImg: require('./img/time.png'),
 };
 
 export default variables;

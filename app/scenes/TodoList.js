@@ -6,8 +6,8 @@ import {
 } from 'react-native';
 
 import NewTodo from './NewTodo';
-import VisibleTodoList from '../components/todos/VisibleTodoList';
-import Filters from '../components/todos/Filters';
+import Todos from '../components/todos/TodosContainer';
+import Filter from '../components/todos/FilterContainer';
 
 class TodoList extends Component {
   constructor(props) {
@@ -28,14 +28,15 @@ class TodoList extends Component {
     return (
       <View style={styles.container}>
         <NavigationBar
-          title={{ title: 'Tasks', tintColor:  variables.colorTint }}
+          statusBar={{tintColor: variables.colorNavBg, style: 'light-content'}}
+          title={{ title: 'Tasks', }}
           rightButton={{ title: 'Add', handler: this.addNewTodo, tintColor: variables.colorNavbarText }}
           style={styles.navbar}
         />
-        <Filters theme={theme} />
         <ScrollView horizontal={false}>
-          <VisibleTodoList theme={theme} />
+          <Todos theme={theme} />
         </ScrollView>
+        <Filter style={styles.filterItem} textStyle={styles.filterTextStyle} />
       </View>
     );
   }

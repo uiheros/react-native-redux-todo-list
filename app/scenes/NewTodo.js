@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react';
 import {
   View,
   ScrollView,
-  Modal,
 } from 'react-native';
 
 import {default as AddTodo} from '../components/add-todo';
@@ -23,18 +22,17 @@ class NewTodo extends Component {
     const {theme} = this.props;
     const {styles, variables} = theme;
     return (
-      <Modal animationType={'slide'} >
-          <View style={styles.container}>
-            <NavigationBar
-              title={{ title: 'New Task', tintColor: variables.colorTint }}
-              leftButton={{ title: 'Cancel', handler: this.cancel, tintColor: variables.colorNavbarText }}
-              style={styles.navbar}
-            />
-            <ScrollView horizontal={false}>
-              <AddTodo onFinish={this.done} theme={theme} />
-            </ScrollView>
-          </View>
-      </Modal>
+      <View style={styles.container}>
+        <NavigationBar
+          statusBar={{tintColor: variables.colorNavBg, style: 'light-content'}}
+          title={{ title: 'Add a new task' }}
+          leftButton={{ title: 'Cancel', handler: this.cancel, tintColor: variables.colorNavbarText }}
+          style={styles.navbar}
+        />
+        <ScrollView horizontal={false}>
+          <AddTodo onFinish={this.done} theme={theme} />
+        </ScrollView>
+      </View>
     );
   }
 }

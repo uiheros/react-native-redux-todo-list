@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 
 const Button = ({theme, disabled, children, onPress}) => {
-  const {styles} = theme;
+  const {styles, variables} = theme;
   const btnStyles = [styles.button];
   if (disabled) {
     btnStyles.push(styles.buttonDisabled);
@@ -15,7 +15,7 @@ const Button = ({theme, disabled, children, onPress}) => {
     <TouchableHighlight
         onPress={onPress}
         style={btnStyles}
-        underlayColor="#a30000"
+        underlayColor={variables.colorMain}
         activeOpacity={1}>
       <Text style={styles.buttonText}>{children}</Text>
     </TouchableHighlight>
