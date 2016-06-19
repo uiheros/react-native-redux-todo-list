@@ -6,8 +6,6 @@ const getVisibleTodos = (todos, filter) => {
   switch (filter) {
     case 'SHOW_ALL':
       return todos;
-    case 'SHOW_COMPLETED':
-      return todos.filter(t => t.completed);
     case 'SHOW_ACTIVE':
       return todos.filter(t => !t.completed);
   }
@@ -27,9 +25,9 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const VisibleTodoList = connect(
+const TodosContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Todos);
 
-export default VisibleTodoList;
+export default TodosContainer;

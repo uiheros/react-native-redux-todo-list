@@ -4,6 +4,8 @@ const todo = (state, action) => {
       return {
         id: action.id,
         title: action.title,
+        createdAt: new Date(),
+        completedAt: null,
         completed: false
       };
     case 'TOGGLE_TODO':
@@ -12,7 +14,8 @@ const todo = (state, action) => {
       }
 
       return Object.assign({}, state, {
-        completed: !state.completed
+        completed: !state.completed,
+        completedAt: !state.completed ? new Date() : null
       });
     default:
       return state;
@@ -20,11 +23,11 @@ const todo = (state, action) => {
 };
 
 const defaultTodos = [
-  {id: 1, title: 'task1', completed: false},
-  {id: 2, title: 'task2', completed: true},
-  {id: 3, title: 'task3', completed: false},
-  {id: 4, title: 'task4', completed: false},
-  {id: 5, title: 'task5', completed: false},
+  {id: 1, title: 'Clean up garage', createdAt: new Date(), completed: false},
+  {id: 2, title: 'Install BBQ', createdAt: new Date(), completed: false},
+  {id: 3, title: 'Watch NBA final', createdAt: new Date(), completed: false},
+  {id: 4, title: 'Buy supprise egg', createdAt: new Date(), completed: false},
+  {id: 5, title: 'Watch Iron Man 3', createdAt: new Date(), completed: false},
 ];
 
 const todos = (state = defaultTodos, action) => {

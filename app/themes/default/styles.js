@@ -1,28 +1,28 @@
 import {
   StyleSheet,
+  Dimensions
 } from 'react-native';
 
 import variables from './variables';
 
+const {height, width} = Dimensions.get('window');
+
 const styles = StyleSheet.create({
+  mainBgImg: {
+    alignSelf: 'center',
+    width: width,
+    height: height,
+  },
   container: {
     flex: 1,
     justifyContent: "space-between",
     alignItems: 'stretch',
-    backgroundColor:  variables.colorBg,
-  },
-  navbar: {
-    borderBottomWidth: 1,
-    borderBottomColor: variables.colorBorder,
-  },
-  separator: {
-    backgroundColor: variables.colorBorder,
   },
   button: {
     flex: 1,
     alignSelf: 'stretch',
     justifyContent: 'center',
-    backgroundColor: variables.colorRed,
+    backgroundColor: variables.colorMain,
     borderRadius: 5,
     marginTop: 50,
     paddingVertical: 15,
@@ -35,38 +35,47 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: variables.colorWhite,
   },
-  todoHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 5,
-    borderBottomWidth: 1,
-    borderBottomColor: variables.colorBorder,
-  },
-  todoHeaderTask: {
-    color: variables.colorSecondaryText,
-    flex: 1,
-    padding: 10,
-    fontWeight: 'bold',
-  },
-  todoHeaderCompleted: {
-    color: variables.colorSecondaryText,
-    padding: 10,
-    fontWeight: 'bold',
-  },
   todoItem: {
-    alignItems: 'center',
+    alignItems: 'stretch',
     flexDirection: 'row',
-    padding: 5,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    opacity: 1,
   },
-  todoItemText: {
-    color: variables.colorNavText,
+  todoItemDetails: {
     flex: 1,
     padding: 10,
   },
-  todoItemCompleteCheck: {
-    padding: 10,
+  todoItemTitle: {
+    color: variables.colorMainText,
+    flex: 1,
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  todoItemTimeStamp: {
+    marginTop: 10,
+    fontSize: 12,
+    color: variables.colorSecondaryText,
+  },
+  todoItemCompleteTask: {
+    padding: 20,
+    backgroundColor: variables.colorMain,
+  },
+  todoItemCompleteTaskIcon: {
+    fontSize: 25,
+    color: '#fff',
+  },
+  filter: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  filterTextStyle: {
+    width: width,
+    paddingTop: 15,
+    paddingBottom: 15,
+    textAlign: 'center',
+    color: variables.colorWhite,
+    backgroundColor: variables.colorMain,
   },
   todoEditForm: {
     justifyContent: 'center',
@@ -81,33 +90,11 @@ const styles = StyleSheet.create({
     borderColor:  variables.colorBorder ,
     borderRadius: 5,
     height: 40,
-    color: variables.colorNavText,
+    color: variables.colorMainText,
     marginTop: 30,
     paddingLeft: 10,
     paddingRight: 10
   },
-  link: {
-  },
-  linkActive: {
-    borderBottomColor: 'red',
-    borderBottomWidth: 1,
-  },
-  linkText: {
-    color: '#696969',
-    paddingLeft: 25,
-    paddingRight: 25,
-    paddingTop: 10,
-    paddingBottom: 10
-  },
-  linkTextActive: {
-    color: 'red',
-  },
-  filtersContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    backgroundColor: '#F7F7F7',
-  }
 });
 
 export default styles;

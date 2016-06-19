@@ -19,27 +19,32 @@ class Todo extends Component {
   }
 
   renderButton() {
+    const {styles} = this.props;
     if (this.props.todo.completed) {
-      return <Icon name="check-circle" size={20} color="#999" />;
+      return <Icon name="check-circle" style={styles.todoItemCompleteTaskIcon} size={20} color="#999" />;
     } else {
-      return <Icon name="circle-o" size={20} color="#999" />;
+      return <Icon name="circle-o" style={styles.todoItemCompleteTaskIcon} size={20} color="#999" />;
     }
   }
 
   render() {
     const {styles, todo} = this.props;
-    const {title} = todo;
+    const {title, createdAt, completedAt} = todo;
 
     return (
       <View style={styles.todoItem}>
-        <Text style={styles.todoItemText}>{title}</Text>
         <TouchableHighlight
-          onPress={this.onPress}
-          activeOpacity={75 / 100}
-          style={styles.todoItemCompleteCheck}
-          underlayColor={"rgb(210,210,210)"}>
+            onPress={this.onPress}
+            activeOpacity={75 / 100}
+            style={styles.todoItemCompleteTask}
+            >
           {this.renderButton()}
         </TouchableHighlight>
+        <View style={styles.todoItemDetails}>
+          <Text style={styles.todoItemTitle}>{title}</Text>
+          <Text style={styles.todoItemTimeStamp}>Created at: {createdAt.toGMTString()}</Text>
+          {completedAt && <Text style={styles.todoItemTimeStamp}>Completed at: {completedAt.toGMTString()}</Text>}
+        </View>
       </View>
     );
   }

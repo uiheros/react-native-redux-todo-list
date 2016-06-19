@@ -12,13 +12,7 @@ class Todos extends Component {
     this.state = {
       dataSource: ds.cloneWithRows(props.todos)
     };
-    this.renderSeparator = this.renderSeparator.bind(this);
     this.renderRow = this.renderRow.bind(this);
-  }
-
-  renderSeparator(sectionID, rowID) {
-    const {styles} = this.props.theme;
-    return <View key={`${sectionID}-${rowID}`} style={styles.separator} />;
   }
 
   renderRow(todo) {
@@ -38,18 +32,11 @@ class Todos extends Component {
   }
 
   render() {
-    const {styles} = this.props.theme;
-
     return (
       <View>
-        <View style={styles.todoHeader}>
-          <Text style={styles.todoHeaderTask}>Tasks</Text>
-          <Text style={styles.todoHeaderCompleted}>Completed?</Text>
-        </View>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
-          renderSeparator={this.renderSeparator}
           enableEmptySections={true}
           automaticallyAdjustContentInsets={false}
         />
