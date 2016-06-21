@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 30,
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
   },
   addTodoInput: {
     flex: 1,
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     color: variables.colorMainText,
     marginTop: 30,
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
   },
 });
 

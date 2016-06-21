@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-
 import {
   Text,
-  TouchableHighlight
+  TouchableHighlight,
 } from 'react-native';
+import { themeable } from '../themes';
 
 class Filter extends Component {
   constructor(props) {
@@ -31,11 +31,17 @@ class Filter extends Component {
   }
 }
 
-Filter.propTypes = {
-  style: PropTypes.number,
-  textStyle: PropTypes.number,
+const ThemeableFilter = themeable(Filter, (theme) => {
+  const { styles } = theme;
+  return {
+    style: styles.filterItem,
+    textStyle: styles.filterTextStyle,
+  };
+});
+
+ThemeableFilter.propTypes = {
   onPress: PropTypes.func.isRequired,
   activeOnly: PropTypes.bool.isRequired
 };
 
-export default Filter;
+export default ThemeableFilter;
