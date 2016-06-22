@@ -12,6 +12,7 @@ const variables = {
   colorBorder: '#cccccc',
   colorWhite: '#ffffff',
   colorDisabled: '#c7c7c7',
+  colorPlaceHolderText: '#ddd',
   mainBgImg: require('./img/time.png'),
 };
 

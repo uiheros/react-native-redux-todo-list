@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, ListView, Text } from 'react-native';
+import { View, ListView } from 'react-native';
 import Todo from './Todo';
 
 const ds = new ListView.DataSource({
@@ -16,9 +16,8 @@ class Todos extends Component {
   }
 
   renderRow(todo) {
-    const {theme, onTodoPress} = this.props;
-    const {styles} = theme;
-    return <Todo todo={todo} onTodoPress={onTodoPress} styles={styles} />;
+    const {onTodoPress} = this.props;
+    return <Todo todo={todo} onTodoPress={onTodoPress} />;
   }
 
   updateDataSource(todos) {
@@ -46,8 +45,8 @@ class Todos extends Component {
 }
 
 Todos.propTypes = {
-  theme: PropTypes.object,
-  todos: PropTypes.array.isRequired
+  todos: PropTypes.array.isRequired,
+  onTodoPress: PropTypes.func.isRequired
 };
 
 export default Todos;

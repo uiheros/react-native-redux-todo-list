@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "android": "react-native run-android",
     "lint": "eslint app/",
-    "test": "npm run eslint"
+    "test": "npm run lint"
   },
   "dependencies": {
     "react": "15.0.2",
